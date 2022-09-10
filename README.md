@@ -12,8 +12,16 @@
 
 Тестовые сценарии для интернет-магазина <a href="http://www.labirint.ru">Labirint.ru"</a>.
 
-Файлы:
-Папка <b>tests</b>:
+
+<b>Запуск тестов:</b><br>
+python -m pytest -v --driver Chrome --driver-path <chromedriver_directory>/<chromedriver_file> tests/books_tests.py<br>
+python -m pytest -v --driver Chrome --driver-path <chromedriver_directory>/<chromedriver_file> tests/main_menu_center_up_tests.py<br>
+python -m pytest -v --driver Chrome --driver-path <chromedriver_directory>/<chromedriver_file> tests/main_menu_down_tests.py<br>
+python -m pytest -v --driver Chrome --driver-path <chromedriver_directory>/<chromedriver_file> tests/main_menu_right_tests.py<br>
+python -m pytest -v --driver Chrome --driver-path <chromedriver_directory>/<chromedriver_file> tests/social_footer_tests.py<br>
+
+
+Папка <b>tests</b> содержит:
 
      main_menu_center_up_tests.py - тесты центрального меню верхнего в шапке главной страницы
      
@@ -25,7 +33,7 @@
      
      books_tests.py - тесты центральных кнопок в теле страницы "Книги" и переходов на последующие страницы
 
-Папка <b>Pages</b>:
+Папка <b>Pages</b> содержит:
 
      base.py содержит библиотеку Smart Page Object
      
@@ -36,14 +44,4 @@
      main_page.py содержит класс для "Главной страницы"
 
 
-Запуск тестов:
 
-python -m pytest -v --driver Chrome --driver-path <chromedriver_directory>/<chromedriver_file> tests/books_tests.py
-
-python -m pytest -v --driver Chrome --driver-path <chromedriver_directory>/<chromedriver_file> tests/main_menu_center_up_tests.py
-
-python -m pytest -v --driver Chrome --driver-path <chromedriver_directory>/<chromedriver_file> tests/main_menu_down_tests.py
-
-python -m pytest -v --driver Chrome --driver-path <chromedriver_directory>/<chromedriver_file> tests/main_menu_right_tests.py
-
-python -m pytest -v --driver Chrome --driver-path <chromedriver_directory>/<chromedriver_file> tests/social_footer_tests.py
